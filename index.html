@@ -15,11 +15,16 @@
     </style>
 </head>
 <body>
+    <input type="text" id="nama" placeholder="masukin nama">
+    <input type="number" id="umur" placeholder="masukin umur">
+    <button onclick="cekdata()">lanjut</button>"
+    <link rel="stylesheet" href="style.css">
     <div id="main-content">
         <h1>Woop Ngapain Wok?</h1>
-        <button id="btn_pencet" onclick="pencet()">Pencet Aj</button>
+        <button id="btn_pencet" onclick="pencet()">Profil Singkat</button>
         <button onclick="alert('Agil_tzy');">Tiktok</button>
-        <button id="btn_epep" onclick="pencet2()">Nama FreeFire</button>
+        <button id="btn_epep" onclick="pencet2()">Tentang W</button>
+    <button id="KataWok">kata-kata Wok</button>
         <h2>Mau Donate? Pencet ini</h2>
         <h3 style="position: relative; left: 130px;">\/</h3>
         <a href="https://sociabuzz.com/ryuki24" target="_blank" style="position: relative; right: 48px; display: block; margin-top: 20px; text-align: center; font-size: 18px; text-decoration: none; color: blue;">Link Donate</a>
@@ -27,22 +32,29 @@
 
     <div id="kenal-gw" class="hidden">
         <h1 style="position: relative; left: 3px;">Nama: Agil</h1>
-        <h2 style="position: relative; left: 2px;">Kelebihan: Mengerti Pelajaran INF("Pas Praktek doang Y").</h2>
-        <h3 style="position: relative; left: 0px;">Kelas: VIIIB</h3>
-        <h4 style="position: relative; left: 0px;">Hobi: ngoprek</h4>
+        <h2 style="position: relative; left: 2px;">Kelas: VIIIB</h2>
+        <h3 style="position: relative; left: 0px;">Hobi: ngoprek</h3>
+        <h3 style="position: relative; left: 0px;">Cita-cita:Hidup Santai Tpi Tetap Produktif</h3>
         <button onclick="backToBeginning()">Back</button>
         <img src="https://i.gifer.com/1UEn.gif" class="centered" style="width: 400px; height: auto;">
     </div>
 
     <div id="nama-freefire" class="hidden">
-        <h1 style="position: relative; left: 3px;">Nama: Agil_Ryuki</h1>
-        <h2 style="position: relative; left: 2px;">Level: 50an</h2>
-        <h3 style="position: relative; left: 0px;">Ranked: Lupa</h3>
+        <h1 style="position: relative; left: 3px;">Nama W Agil
+        </h1>
+        <h2 style="font-size: larger relative; left: 3px;">-Dikasih Tugas-Santai dlu</h2>
+        <h2 style="font-size: larger relative; left: 3px;">-Dikasih Ujian-Andelin Yg Inget Doang</h2>
+        <h2 style="position: relative; left: 2px;">"Klo Suka Sama Orng
+            Ga Pernah Di Ungkapin"</h2>
         <button onclick="backToBeginning()">Back</button>
         <img src="https://i.gifer.com/1UEn.gif" class="centered" style="width: 400px; height: auto;">
     </div>
 
     <script src="java.js"></script>
+    <style>p{
+        text-align: center;
+    }</style>
+    <p style="font-size: -large;">#Website gabut doang#</p>
 
     <script>
         function pencet() {
@@ -60,10 +72,27 @@
             document.getElementById('nama-freefire').classList.add('hidden');
             document.getElementById('main-content').classList.remove('hidden');
         }
+
+        // Quotes logic for KataWok button
+        document.addEventListener('DOMContentLoaded', function() {
+            const quotes = [
+                "Gusti ngerti,aku mung iso nrimo lan ndedonga",
+                "Tresna Kudu Kalah Karo keyakinan",
+                "Agama Ngawe wates,nanging ati ora iso langsung lali",
+                "Temboke ora mung dhuwur, nanging digawe saka bedane pangandel",
+                "Temboke dhuwur banget, aku sing ngucap masyalah, kowe sing ngucap puji gusti"
+            ];
+            const kataWokBtn = document.getElementById("KataWok");
+            if (kataWokBtn) {
+                kataWokBtn.addEventListener('click', function() {
+                    const randomIndex = Math.floor(Math.random() * quotes.length);
+                    alert(quotes[randomIndex]);
+                });
+            }
+        });
     </script>
 </body>
 </html>
-
 
 
 
