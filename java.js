@@ -1,7 +1,15 @@
-let nama = prompt("Massukin nama ");
-let umur = prompt("tulis umur ");
+function cekdata() {
+    const namainput = document.getElementById("nama");
+    const umurinput = document.getElementById("umur");
 
-let konfirmasi = confirm("apakah nama sama umur lu udah bener??");
-alert("Nama " + nama + " dan umur " + umur);
+    const nama = namainput.value.trim();
+    const umur = umurinput.value.trim();
 
-alert("ohh yaudah kalo bener");
+    if (nama === "" || umur === "") {
+        alert("Jangan Di kosongin!");
+        if (nama === "") namainput.focus();
+        else umurinput.focus();
+    } else {
+        alert("Nama " + nama + " umur " + umur + " tahun");
+    }
+}
